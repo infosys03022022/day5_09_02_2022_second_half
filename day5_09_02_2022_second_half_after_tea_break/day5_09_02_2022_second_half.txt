@@ -1,0 +1,40 @@
+We have 4 access specifiers and they can be used with class, instance variables and methods.
+
+What are all access specifiers which we have in Java?
+* private private is accessible within the same class only 
+  wherever it is declared
+* default ( for default we need not write anything like default)
+* protected ( Inheritance==> protected members are accessed by the 
+              same class, derived classes and non-non derived class
+              in the same package)
+* public  ( public is accessible anywhere outside the class) 
+================================================================================================
+So when we are talking about Encapsulation we are concerned about the specifier private.
+So private will restrict the access of private member outside the class so data remains
+encapsulated/hidden within the class. 
+
+So if the data is hidden, how we are going to interact with the instance variables?
+We are going to take the help of methods which we declare as public and they are
+accessible outside the class.
+-------------------------------------------------------------------------------------------
+ 1     Account acc1=new Account();
+ 2     acc1.setAccountId(1);
+ 3     acc1=null;
+The object at line1 is eligible for garbage collection.
+
+  1   Account acc1=null;
+  2   Account acc2=null;
+  3   Account acc1=new Account();  1234
+  4   Account acc2=new Account();  4567
+  5   acc2=acc1;      // One object is eligible for garbage collection the object which is created in  
+      4567            // line 4
+      1234
+  6   acc1=new Account();         7890
+  7  acc1=acc2=null;              7890 and 1234 objects are eligible for garbage collection
+------------------------------------------------------------------------------
+*String is a sequence of characters.
+* How to create String objects.
+* Comparing two string objects.
+
+
+
